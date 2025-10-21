@@ -1,0 +1,58 @@
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a; /* Dark background to make the ghost effect stand out */
+}
+
+/* 1. Gradient Text (Purple to Blue) */
+.text-gradient {
+    background-image: linear-gradient(to right, #a855f7, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* 2. Gradient Border Wrapper */
+.gradient-border-wrapper {
+    background: linear-gradient(to right, #a855f7, #3b82f6);
+    padding: 2px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* 3. Inner Content (Ghost Center) */
+.ghost-button-content {
+    background-color: #0f172a;
+    padding: 14px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* 4. Size Badge */
+.size-badge {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    margin-left: 1rem;
+    background-color: #1e293b;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+/* 5. Click Feedback */
+.gradient-border-wrapper:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
