@@ -1,0 +1,29 @@
+/* Common button style */
+.btn {
+  font-weight: 500;
+  border-radius: 0.5rem; /* rounded corners */
+  font-size: 0.875rem;   /* text-sm */
+  padding: 0.625rem 1.25rem; /* py-2.5 px-5 */
+  text-align: center;
+  margin-right: 0.5rem;  /* spacing */
+  margin-bottom: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(0,0,0,0.25);
+}
+
+/* Your gradient button */
+.orange-cyan {
+  color: white;
+  background: linear-gradient(to right, rgb(255, 89, 0), rgb(0, 255, 255));
+}
+
+.orange-cyan:hover {
+  background: linear-gradient(to left, rgb(255, 89, 0), rgb(0, 255, 255));
+}
