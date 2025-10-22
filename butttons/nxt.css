@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #111;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  padding: 20px;
+  border-radius: 12px;
+  background: #1a1a1a;
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
+}
+
+.post h2, .post h3 {
+  font-weight: 600;
+  color: #ff1493; /* Pink highlight */
+}
+
+.post ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post li {
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.post li b {
+  font-weight: 600;
+  color: #fff;
+}
+
+.gradient-border-wrapper {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#1a1a1a, #1a1a1a), 
+                    linear-gradient(to right, #ff00a0, #ff77ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ghost-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background: transparent;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.ghost-button-content:hover {
+  background: rgba(255, 20, 147, 0.15);
+  transform: scale(1.05);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff007f, #ff77ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.size-badge {
+  background: #ff007f;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+}
