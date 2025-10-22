@@ -1,36 +1,44 @@
-
-/* 🌟 Base Starcast Carousel Styles */
+/* 🌟 Starcast Carousel Styles */
 .cast-carousel {
   display: flex;
   gap: 15px;
   overflow-x: auto;
-  padding: 12px 0;
+  padding: 14px 8px;
+  border-radius: 12px;
   scroll-behavior: smooth;
   scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  background: var(--carousel-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* WebKit Scrollbar */
 .cast-carousel::-webkit-scrollbar {
   height: 6px;
 }
 .cast-carousel::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
   border-radius: 3px;
 }
+.cast-carousel::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
 
-/* 🎬 Cast Item */
+/* 🎭 Cast Item */
 .cast-item {
   flex: 0 0 auto;
   text-align: center;
   width: 80px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .cast-item:hover {
-  transform: scale(1.08);
+  transform: translateY(-4px) scale(1.05);
 }
 
 /* 🧑‍🎤 Actor Image */
 .cast-item img {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--accent-color);
@@ -40,32 +48,28 @@
 }
 .cast-item img:hover {
   border-color: var(--hover-accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 /* 🧾 Actor Name */
 .cast-item p {
   font-size: 13px;
   font-weight: 500;
+  color: var(--text-color);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
-  color: var(--text-color);
 }
 
-/* 🌞 Light Theme (default) */
+/* 🌞 Light Theme */
 :root {
   --accent-color: #ff9100;
   --hover-accent: #00c853;
   --text-color: #222;
-  --scroll-thumb: #ccc;
-  --scroll-track: transparent;
-}
-.cast-carousel::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb);
-}
-.cast-carousel::-webkit-scrollbar-track {
-  background: var(--scroll-track);
+  --carousel-bg: #ffffff;
+  --scroll-thumb: #d1d1d1;
+  --scroll-track: #f3f3f3;
 }
 
 /* 🌙 Dark Theme */
@@ -73,24 +77,25 @@
   :root {
     --accent-color: #ff6d00;
     --hover-accent: #00e676;
-    --text-color: #f0f0f0;
+    --text-color: #f5f5f5;
+    --carousel-bg: #1b1b1b;
     --scroll-thumb: #555;
     --scroll-track: #222;
   }
 
   .cast-carousel {
-    background: #121212;
+    box-shadow: 0 3px 8px rgba(255,255,255,0.08);
   }
 
   .cast-item img {
-    box-shadow: 0 3px 6px rgba(255,255,255,0.1);
+    box-shadow: 0 3px 6px rgba(255,255,255,0.12);
   }
 }
 
 /* 📱 Responsive */
 @media (max-width: 600px) {
   .cast-item {
-    width: 70px;
+    width: 68px;
   }
   .cast-item img {
     width: 60px;
@@ -100,6 +105,7 @@
     font-size: 12px;
   }
 }
+
 
 /* Common Button Styles (Shape, Text, Spacing) */
 .download-btn {
