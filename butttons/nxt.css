@@ -1,3 +1,67 @@
+
+/* 🎞️ Movie Info Section */
+.movie-info {
+  margin: 10px 0 20px;
+}
+.movie-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+.movie-info p::before {
+  content: "• ";
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 4px;
+}
+.movie-info b {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* 🏷️ Tags (Genres) as Badges */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 16px;
+}
+.tag-badge {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--tag-border);
+}
+.tag-badge::before {
+  content: "#";
+  margin-right: 1px;
+}
+
+/* 🌞 Light Theme */
+:root {
+  --accent-color: #ff9100;
+  --text-color: #222;
+  --tag-bg: #f4f4f4;
+  --tag-text: #333;
+  --tag-border: #d0d0d0;
+}
+
+/* 🌙 Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff6d00;
+    --text-color: #eaeaea;
+    --tag-bg: #2a2a2a;
+    --tag-text: #d0d0d0;
+    --tag-border: #444;
+  }
+}
+
+
+
 /* 🌟 Starcast Carousel Styles */
 .cast-carousel {
   display: flex;
