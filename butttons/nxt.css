@@ -1,3 +1,106 @@
+
+/* 🌟 Base Starcast Carousel Styles */
+.cast-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 12px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.cast-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.cast-carousel::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+
+/* 🎬 Cast Item */
+.cast-item {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+.cast-item:hover {
+  transform: scale(1.08);
+}
+
+/* 🧑‍🎤 Actor Image */
+.cast-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  margin-bottom: 6px;
+  transition: 0.3s ease;
+}
+.cast-item img:hover {
+  border-color: var(--hover-accent);
+}
+
+/* 🧾 Actor Name */
+.cast-item p {
+  font-size: 13px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* 🌞 Light Theme (default) */
+:root {
+  --accent-color: #ff9100;
+  --hover-accent: #00c853;
+  --text-color: #222;
+  --scroll-thumb: #ccc;
+  --scroll-track: transparent;
+}
+.cast-carousel::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+}
+.cast-carousel::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+/* 🌙 Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff6d00;
+    --hover-accent: #00e676;
+    --text-color: #f0f0f0;
+    --scroll-thumb: #555;
+    --scroll-track: #222;
+  }
+
+  .cast-carousel {
+    background: #121212;
+  }
+
+  .cast-item img {
+    box-shadow: 0 3px 6px rgba(255,255,255,0.1);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .cast-item {
+    width: 70px;
+  }
+  .cast-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .cast-item p {
+    font-size: 12px;
+  }
+}
+
 /* Common Button Styles (Shape, Text, Spacing) */
 .download-btn {
     display: block; 
