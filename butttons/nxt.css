@@ -1,42 +1,16 @@
-// Circular Mask
-
-.circular-mask {
-	/* Make it circular */
-	border-radius: 50%;
-
-	/* Create a circular mask with a fade */
-	-webkit-mask-image: radial-gradient(
-		circle,
-		black 55%,
-		rgba(0, 0, 0, 0.95) 57%,
-		rgba(0, 0, 0, 0.85) 59%,
-		transparent 70%
-	);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: cover;
-
-	mask-image: radial-gradient(
-		circle,
-		black 55%,
-		rgba(0, 0, 0, 0.95) 57%,
-		rgba(0, 0, 0, 0.85) 59%,
-		rgba(0, 0, 0, 0.15) 66%,
-		rgba(0, 0, 0, 0.05) 68%,
-		transparent 70%
-	);
-	mask-repeat: no-repeat;
-	mask-size: cover;
+  }
+  50%
+  {
+    transform:rotate(180deg)
+  }
+   75%
+  {
+    transform:rotate(270deg)
+  }
+  100% {
+    transform:rotate(360deg)
+  }
 }
-
-// Common
-
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: white;
-
 
 
 /* 🎞️ Movie Info Section */
