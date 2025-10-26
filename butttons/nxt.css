@@ -162,55 +162,66 @@
   .cast-overlay { font-size: 10px; }
 }
 
-/* Common Button Styles (Shape, Text, Spacing) */
-.download-btn {
-    display: block; 
-    width: 90%; /* To look like the mobile screenshot */
-    max-width: 400px; 
-    margin: 10px auto; /* Centers the button and adds vertical space */
-    padding: 15px 10px;
-    
-    /* Text Styles */
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase; /* ALL CAPS */
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    
-    /* Shape and Interactivity */
-    border-radius: 8px; /* Slightly rounded corners */
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s ease;
-    font-family: Arial, sans-serif; /* Recommended font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+.section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #300808 50%, #5c1a1a 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- GREEN BUTTON STYLES (Primary/Direct Link) --- */
-.download-btn-green {
-    background-color: #388e3c; 
-    /* Shadow for the 3D/Pressed Look */
-    box-shadow: 0 5px 0 #1b5e20; 
+/* 🎯 Buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  width: 85%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  background: #7a2e2e;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
 }
 
-/* Hover/Active Effects for Green */
-.download-btn-green:active {
-    background-color: #2e7d32; 
-    box-shadow: 0 2px 0 #1b5e20; /* Flattens the button */
-    transform: translateY(3px); /* Moves it down to complete the press effect */
+/* Ripple */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+}
+.btn:active::after {
+  width: 250%;
+  height: 250%;
+  opacity: 0;
+  transition: 0s;
 }
 
-
-/* --- ORANGE BUTTON STYLES (Secondary/Multi Link) --- */
-.download-btn-orange {
-    background-color: #f57c00; 
-    /* Shadow for the 3D/Pressed Look */
-    box-shadow: 0 5px 0 #e65100;
+/* 💚 Tap = green → gray */
+.btn:active {
+  background: #00ff00 !important;
+}
+.btn.released {
+  background: #444 !important;
+  color: #ccc;
 }
 
-/* Hover/Active Effects for Orange */
-.download-btn-orange:active {
-    background-color: #ef6c00; 
-    box-shadow: 0 2px 0 #e65100; /* Flattens the button */
-    transform: translateY(3px); /* Moves it down to complete the press effect */
-}
